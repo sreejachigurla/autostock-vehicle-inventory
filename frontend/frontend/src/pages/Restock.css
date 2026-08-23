@@ -1,0 +1,774 @@
+/* =========================================
+   RESTOCK PAGE
+========================================= */
+
+.restock-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(99, 102, 241, 0.12),
+      transparent 35%
+    ),
+    #f6f8fc;
+  color: #111827;
+}
+
+
+/* =========================================
+   TOP BAR
+========================================= */
+
+.restock-topbar {
+  height: 72px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 5%;
+  box-sizing: border-box;
+}
+
+.restock-back {
+  border: none;
+  background: transparent;
+
+  color: #4f46e5;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.restock-back:hover {
+  transform: translateX(-4px);
+}
+
+.restock-brand {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.restock-container {
+  width: min(1100px, 92%);
+  margin: auto;
+
+  padding: 42px 0 60px;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.restock-heading {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  margin-bottom: 30px;
+}
+
+.restock-heading-icon {
+  width: 64px;
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #4f46e5,
+      #7c3aed
+    );
+
+  font-size: 30px;
+
+  box-shadow:
+    0 12px 30px
+    rgba(79, 70, 229, 0.22);
+}
+
+.restock-heading p {
+  margin: 0 0 5px;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  color: #6366f1;
+}
+
+.restock-heading h1 {
+  margin: 0;
+
+  font-size: clamp(
+    28px,
+    4vw,
+    40px
+  );
+}
+
+.restock-heading span {
+  display: block;
+
+  margin-top: 7px;
+
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   MAIN CARD
+========================================= */
+
+.restock-main-card {
+  background: white;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 20px 50px
+    rgba(15, 23, 42, 0.07);
+
+  overflow: hidden;
+
+  margin-bottom: 30px;
+}
+
+.restock-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 26px 30px;
+
+  border-bottom: 1px solid #edf0f4;
+}
+
+.restock-card-header h2 {
+  margin: 0;
+
+  font-size: 20px;
+}
+
+.restock-card-header p {
+  margin: 7px 0 0;
+
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+.stock-header-icon {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: #ecfdf5;
+
+  font-size: 24px;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.restock-form {
+  padding: 30px;
+}
+
+.restock-field {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 22px;
+}
+
+.restock-field label {
+  margin-bottom: 8px;
+
+  color: #374151;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.restock-field select,
+.restock-field input {
+  width: 100%;
+  height: 50px;
+
+  box-sizing: border-box;
+
+  padding: 0 15px;
+
+  border: 1px solid #d9dee7;
+
+  border-radius: 12px;
+
+  background: white;
+
+  color: #111827;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition: 0.2s;
+}
+
+.restock-field select:focus,
+.restock-field input:focus {
+  border-color: #6366f1;
+
+  box-shadow:
+    0 0 0 4px
+    rgba(99, 102, 241, 0.1);
+}
+
+.restock-field small {
+  margin-top: 7px;
+
+  color: #9ca3af;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   SELECTED VEHICLE
+========================================= */
+
+.selected-vehicle {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 16px;
+
+  margin-bottom: 22px;
+
+  border: 1px solid #ddd6fe;
+
+  border-radius: 14px;
+
+  background: #fafaff;
+}
+
+.selected-car-icon {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #eef2ff;
+
+  font-size: 22px;
+}
+
+.selected-vehicle > div:nth-child(2) {
+  flex: 1;
+}
+
+.selected-vehicle strong {
+  display: block;
+
+  font-size: 15px;
+}
+
+.selected-vehicle span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #6b7280;
+
+  font-size: 12px;
+}
+
+.current-stock {
+  text-align: right;
+}
+
+.current-stock small {
+  display: block;
+
+  color: #9ca3af;
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+.current-stock strong {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #4f46e5;
+
+  font-size: 20px;
+}
+
+
+/* =========================================
+   STOCK PREVIEW
+========================================= */
+
+.stock-preview {
+  display: grid;
+
+  grid-template-columns:
+    1fr auto 1fr auto 1fr;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 20px;
+
+  margin-bottom: 22px;
+
+  border-radius: 16px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e5e7eb;
+}
+
+.stock-preview > div {
+  text-align: center;
+}
+
+.stock-preview span {
+  display: block;
+
+  color: #6b7280;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+.stock-preview strong {
+  display: block;
+
+  margin-top: 5px;
+
+  font-size: 22px;
+}
+
+.stock-preview .plus,
+.stock-preview .equals {
+  color: #9ca3af;
+
+  font-size: 22px;
+}
+
+.stock-preview .new-stock {
+  padding: 10px;
+
+  border-radius: 12px;
+
+  background: #ecfdf5;
+}
+
+.stock-preview .new-stock strong {
+  color: #059669;
+}
+
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+.restock-message {
+  padding: 13px 15px;
+
+  border-radius: 12px;
+
+  margin-bottom: 20px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+.restock-message.success {
+  background: #ecfdf5;
+
+  border: 1px solid #a7f3d0;
+
+  color: #047857;
+}
+
+.restock-message.error {
+  background: #fef2f2;
+
+  border: 1px solid #fecaca;
+
+  color: #b91c1c;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.restock-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 12px;
+
+  padding-top: 22px;
+
+  border-top: 1px solid #edf0f4;
+}
+
+.restock-cancel,
+.restock-submit {
+  min-height: 48px;
+
+  padding: 0 22px;
+
+  border-radius: 12px;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.restock-cancel {
+  border: 1px solid #d9dee7;
+
+  background: white;
+
+  color: #4b5563;
+}
+
+.restock-cancel:hover {
+  background: #f9fafb;
+}
+
+.restock-submit {
+  border: none;
+
+  background:
+    linear-gradient(
+      135deg,
+      #4f46e5,
+      #7c3aed
+    );
+
+  color: white;
+
+  box-shadow:
+    0 10px 22px
+    rgba(79, 70, 229, 0.2);
+}
+
+.restock-submit:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 14px 28px
+    rgba(79, 70, 229, 0.28);
+}
+
+.restock-submit:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* =========================================
+   INVENTORY CARD
+========================================= */
+
+.inventory-card {
+  background: white;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 22px;
+
+  padding: 28px;
+
+  box-shadow:
+    0 15px 40px
+    rgba(15, 23, 42, 0.05);
+}
+
+.inventory-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.inventory-header h2 {
+  margin: 0;
+
+  font-size: 20px;
+}
+
+.inventory-header p {
+  margin: 6px 0 0;
+
+  color: #6b7280;
+
+  font-size: 13px;
+}
+
+.inventory-header > span {
+  padding: 7px 12px;
+
+  border-radius: 20px;
+
+  background: #eef2ff;
+
+  color: #4f46e5;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   INVENTORY GRID
+========================================= */
+
+.inventory-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+}
+
+.inventory-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 15px;
+
+  border: 1px solid #edf0f4;
+
+  border-radius: 14px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.inventory-item:hover {
+  border-color: #a5b4fc;
+
+  background: #fafaff;
+
+  transform: translateY(-2px);
+}
+
+.inventory-car {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: #f1f5f9;
+
+  font-size: 20px;
+}
+
+.inventory-details {
+  flex: 1;
+}
+
+.inventory-details strong {
+  display: block;
+
+  font-size: 14px;
+}
+
+.inventory-details span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #9ca3af;
+
+  font-size: 12px;
+}
+
+.inventory-stock {
+  text-align: right;
+}
+
+.inventory-stock small {
+  display: block;
+
+  color: #9ca3af;
+
+  font-size: 9px;
+
+  font-weight: 800;
+}
+
+.inventory-stock strong {
+  display: block;
+
+  margin-top: 3px;
+
+  font-size: 20px;
+
+  color: #4f46e5;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .restock-container {
+    width: 94%;
+
+    padding-top: 28px;
+  }
+
+  .restock-heading {
+    align-items: flex-start;
+  }
+
+  .restock-heading-icon {
+    width: 54px;
+    height: 54px;
+
+    flex-shrink: 0;
+  }
+
+  .restock-card-header {
+    padding: 22px;
+  }
+
+  .restock-form {
+    padding: 22px;
+  }
+
+  .stock-preview {
+    grid-template-columns: 1fr;
+
+    gap: 8px;
+  }
+
+  .stock-preview .plus,
+  .stock-preview .equals {
+    display: none;
+  }
+
+  .restock-actions {
+    flex-direction: column-reverse;
+  }
+
+  .restock-cancel,
+  .restock-submit {
+    width: 100%;
+  }
+
+  .inventory-card {
+    padding: 20px;
+  }
+
+  .inventory-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .restock-topbar {
+    padding: 0 16px;
+  }
+
+  .restock-brand {
+    font-size: 16px;
+  }
+
+  .restock-heading h1 {
+    font-size: 27px;
+  }
+
+  .restock-heading span {
+    font-size: 13px;
+  }
+
+  .selected-vehicle {
+    flex-wrap: wrap;
+  }
+
+  .current-stock {
+    width: 100%;
+
+    text-align: left;
+
+    padding-left: 60px;
+  }
+
+}

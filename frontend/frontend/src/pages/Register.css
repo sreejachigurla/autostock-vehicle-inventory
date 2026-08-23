@@ -1,0 +1,150 @@
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background: linear-gradient(135deg, #0f172a, #1e1b4b);
+}
+
+.register-card {
+  width: 900px;
+  max-width: 95%;
+  min-height: 560px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.register-brand {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: white;
+}
+
+.register-logo {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.register-brand h1 {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+.register-brand p {
+  font-size: 17px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.register-form-section {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.register-heading h2 {
+  margin: 0;
+  font-size: 32px;
+  color: #111827;
+}
+
+.register-heading p {
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.register-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.register-group label {
+  font-weight: 600;
+  color: #374151;
+}
+
+.register-group input {
+  padding: 13px 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+}
+
+.register-group input:focus {
+  border-color: #2563eb;
+}
+
+.register-button {
+  margin-top: 10px;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.register-button:hover {
+  background: #1d4ed8;
+}
+
+.register-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.register-error {
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.register-footer {
+  margin-top: 25px;
+  text-align: center;
+  color: #6b7280;
+}
+
+.register-login-button {
+  margin-left: 5px;
+  border: none;
+  background: none;
+  color: #2563eb;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .register-card {
+    grid-template-columns: 1fr;
+  }
+
+  .register-brand {
+    display: none;
+  }
+
+  .register-form-section {
+    padding: 30px;
+  }
+}

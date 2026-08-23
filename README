@@ -1,6 +1,6 @@
 🚗 AutoStock – Car Dealership Inventory System
 
-A full-stack **Car Dealership Inventory Management System** developed as part of the TDD Kata. The application allows users to browse and purchase vehicles, while administrators can manage vehicles, inventory, users, purchases, and restocking operations through a dedicated dashboard.
+A full-stack Car Dealership Inventory Management System** developed as part of the TDD Kata. The application allows users to browse and purchase vehicles, while administrators can manage vehicles, inventory, users, purchases, and restocking operations through a dedicated dashboard.
 
  📌 Project Overview
 
@@ -357,52 +357,17 @@ Tests Failed: 0
 > Replace the placeholder values with the actual test results before submission.
 
 
- 📸 Screenshots
-
-1. Login page
-2. User dashboard
-3. Vehicle listing
-4. Vehicle search
-5. Admin dashboard
-6. Add Vehicle page
-7. Manage Vehicles page
-8. Restock page
-9. Reports page
-10. Purchase history
-
-Example:
-
-screenshots/
-├──Screenshot 2026-08-23 132355.png
-├── "C:\Users\Sreeja\OneDrive\Pictures\Screenshots\Screenshot 2026-08-23 132546.png"
-├──"C:\Users\Sreeja\OneDrive\Pictures\Screenshots\Screenshot 2026-08-23 132550.png"
-├── "C:\Users\Sreeja\OneDrive\Pictures\Screenshots\Screenshot 2026-08-23 132706.png"
-├── "C:\Users\Sreeja\OneDrive\Pictures\Screenshots\Screenshot 2026-08-23 132706.png"
-├── "C:\Users\Sreeja\OneDrive\Pictures\Screenshots\Screenshot 2026-08-23 132845.png"
-└── "C:\Users\Sreeja\OneDrive\Pictures\Screenshots\Screenshot 2026-08-23 133007.png"
-├──"C:\Users\Sreeja\OneDrive\Pictures\Screenshots\Screenshot 2026-08-23 133104.png"
-├──"C:\Users\Sreeja\OneDrive\Pictures\Screenshots\Screenshot 2026-08-23 133148.png"
 
 
-```
+🤖 My AI Usage
 
-Then include them in this section:
+ AI Tool Used
 
-```markdown
-![Admin Dashboard]("C:\Users\Sreeja\OneDrive\Pictures\Screenshots\Screenshot 2026-08-23 132546.png")
-```
-
----
-
-# 🤖 My AI Usage
-
-## AI Tool Used
-
-**ChatGPT (OpenAI)**
+ChatGPT (OpenAI)
 
 ChatGPT was used as an AI-assisted development tool during the implementation of the AutoStock – Car Dealership Inventory System.
 
-## How ChatGPT Was Used
+How ChatGPT Was Used
 
 ChatGPT was used for:
 
@@ -420,23 +385,21 @@ ChatGPT was used for:
 * Troubleshooting Git and GitHub issues.
 * Preparing project documentation and deployment guidance.
 
-## Reflection
+ Reflection
 
 ChatGPT helped accelerate development by providing technical explanations, debugging assistance, implementation guidance, and UI improvement suggestions.
 
 The suggestions were reviewed and adapted according to the project's requirements and existing codebase. The AI was used as a development assistant while building and testing the application.
 
----
-
-# 📄 PROMPTS.md
+ 📄 PROMPTS.md
 
 The repository includes a root-level `PROMPTS.md` file containing the relevant raw AI conversations/prompts used during development, as required by the assignment.
 
 The prompts are maintained separately from this README and are not summarized here.
 
----
 
-# 🔄 Git & Version Control
+
+ 🔄 Git & Version Control
 
 Git was used throughout the development process to manage the source code.
 
@@ -444,16 +407,14 @@ Development work was organized into commits representing different stages of imp
 
 Example commit format:
 
-```text
 feat: implement vehicle API
 fix: resolve authentication issue
 feat: add admin dashboard
 style: improve dashboard UI
 docs: update README
-```
----
 
-# 🔒 Security
+
+ 🔒 Security
 
 The project follows basic security practices including:
 
@@ -462,11 +423,9 @@ The project follows basic security practices including:
 * Protected API routes
 * Admin authorization
 * Environment variables for secrets
-* `.gitignore` configuration to prevent sensitive files from being committed
+* .gitignore configuration to prevent sensitive files from being committed
 
----
-
-# 🎯 Project Objective
+🎯 Project Objective
 
 The objective of AutoStock is to provide a practical full-stack inventory management solution for a car dealership while demonstrating skills in:
 
@@ -481,16 +440,12 @@ The objective of AutoStock is to provide a practical full-stack inventory manage
 * Software testing
 * Responsive UI design
 
----
+ 👩‍💻 Author
 
-# 👩‍💻 Author
-
-**Sreeja Chigurla**
+Sreeja Chigurla
 
 4th B.Tech – Computer Science and Engineering
 
----
+📜 License
 
-# 📜 License
-
-This project was developed for educational and evaluation purposes as part of the **TDD Kata: Car Dealership Inventory System**.
+This project was developed for educational and evaluation purposes as part of the **TDD Kata: Car Dealership Inventory System.

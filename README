@@ -1,0 +1,531 @@
+# 🚗 AutoStock – Car Dealership Inventory System
+
+A full-stack **Car Dealership Inventory Management System** developed as part of the TDD Kata. The application allows users to browse and purchase vehicles, while administrators can manage vehicles, inventory, users, purchases, and restocking operations through a dedicated dashboard.
+
+---
+
+## 📌 Project Overview
+
+AutoStock is a web-based vehicle inventory management application designed to simplify dealership inventory operations.
+
+The system provides:
+
+* User registration and login
+* JWT-based authentication
+* Role-based authorization
+* Vehicle inventory management
+* Vehicle search and filtering
+* Vehicle purchasing
+* Vehicle restocking
+* Admin vehicle management
+* User management
+* Purchase history
+* Inventory reports
+* Admin dashboard
+* Responsive React-based user interface
+
+---
+
+## 🛠️ Technology Stack
+
+### Backend
+
+* Node.js
+* Express.js
+* MongoDB
+* Mongoose
+* JSON Web Token (JWT)
+* bcrypt
+* REST API
+
+### Frontend
+
+* React
+* Vite
+* JavaScript
+* HTML5
+* CSS3
+
+### Development Tools
+
+* Git
+* GitHub
+* Visual Studio Code
+* MongoDB
+* MongoDB Compass
+* ChatGPT
+
+---
+
+## 📂 Project Structure
+
+```text
+car-dealership-inventory/
+│
+├── backend/
+│   ├── src/
+│   │   ├── config/
+│   │   │   └── db.js
+│   │   │
+│   │   ├── controllers/
+│   │   │   ├── authController.js
+│   │   │   ├── userController.js
+│   │   │   └── vehicleController.js
+│   │   │
+│   │   ├── middleware/
+│   │   │   ├── adminMiddleware.js
+│   │   │   └── authMiddleware.js
+│   │   │
+│   │   ├── models/
+│   │   │   ├── Purchase.js
+│   │   │   ├── User.js
+│   │   │   └── Vehicle.js
+│   │   │
+│   │   ├── routes/
+│   │   │   ├── authRoutes.js
+│   │   │   ├── userRoutes.js
+│   │   │   └── vehicleRoutes.js
+│   │   │
+│   │   ├── app.js
+│   │   ├── server.js
+│   │   └── createAdmin.js
+│   │
+│   ├── package.json
+│   └── package-lock.json
+│
+├── frontend/
+│   └── frontend/
+│       ├── public/
+│       ├── src/
+│       │   ├── pages/
+│       │   ├── services/
+│       │   ├── App.jsx
+│       │   ├── App.css
+│       │   ├── index.css
+│       │   ├── main.jsx
+│       │   └── style.css
+│       ├── index.html
+│       ├── package.json
+│       └── vite.config.js
+│
+├── .gitignore
+├── README.md
+└── PROMPTS.md
+```
+
+---
+
+# ✨ Features
+
+## 👤 User Features
+
+### Registration
+
+Users can create an account by providing their required registration details.
+
+### Login
+
+Registered users can securely log in using JWT-based authentication.
+
+### Vehicle Browsing
+
+Users can view vehicles currently available in the dealership inventory.
+
+### Vehicle Search
+
+Vehicles can be searched based on:
+
+* Make
+* Model
+* Category
+* Price range
+
+### Purchase
+
+Users can purchase an available vehicle.
+
+The vehicle quantity is decreased after a successful purchase.
+
+### Purchase History
+
+Users can view their previous vehicle purchases.
+
+### Profile
+
+Users can view their account/profile information.
+
+---
+
+# 👨‍💼 Admin Features
+
+Administrators have additional inventory-management privileges.
+
+### Admin Dashboard
+
+The dashboard provides an overview of:
+
+* Total vehicle models
+* Available stock
+* Inventory value
+* Low-stock vehicles
+* Recent inventory
+
+### Add Vehicle
+
+Administrators can add new vehicles to the inventory.
+
+Each vehicle contains:
+
+* Unique ID
+* Make
+* Model
+* Category
+* Price
+* Quantity
+
+### Update Vehicle
+
+Administrators can update vehicle information.
+
+### Delete Vehicle
+
+Administrators can remove vehicles from the inventory.
+
+### Restock
+
+Administrators can increase the available quantity of an existing vehicle.
+
+### User Management
+
+Administrators can manage registered users.
+
+### Reports
+
+The application provides inventory-related reporting information through the admin interface.
+
+---
+
+# 🔐 Authentication & Authorization
+
+The backend uses **JWT-based authentication**.
+
+Protected API endpoints require a valid authentication token.
+
+The application uses role-based authorization to distinguish between:
+
+* Regular users
+* Administrators
+
+Administrative operations such as deleting and restocking vehicles require administrator privileges.
+
+---
+
+# 🔌 REST API
+
+## Authentication
+
+| Method | Endpoint             | Description         |
+| ------ | -------------------- | ------------------- |
+| POST   | `/api/auth/register` | Register a new user |
+| POST   | `/api/auth/login`    | Login user          |
+
+## Vehicles
+
+| Method | Endpoint               | Description            |
+| ------ | ---------------------- | ---------------------- |
+| GET    | `/api/vehicles`        | Get available vehicles |
+| GET    | `/api/vehicles/search` | Search vehicles        |
+| POST   | `/api/vehicles`        | Add vehicle            |
+| PUT    | `/api/vehicles/:id`    | Update vehicle         |
+| DELETE | `/api/vehicles/:id`    | Delete vehicle         |
+
+## Inventory
+
+| Method | Endpoint                     | Description      |
+| ------ | ---------------------------- | ---------------- |
+| POST   | `/api/vehicles/:id/purchase` | Purchase vehicle |
+| POST   | `/api/vehicles/:id/restock`  | Restock vehicle  |
+
+---
+
+# ⚙️ Local Setup
+
+## Prerequisites
+
+Install the following before running the project:
+
+* Node.js
+* npm
+* MongoDB
+* Git
+
+---
+
+## 1. Clone the Repository
+
+```bash
+git clone <YOUR_GITHUB_REPOSITORY_URL>
+cd car-dealership-inventory
+```
+
+---
+
+# 2. Backend Setup
+
+Open a terminal:
+
+```bash
+cd backend
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Create a `.env` file inside the `backend` directory.
+
+Example:
+
+```env
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+```
+
+Start the backend:
+
+```bash
+npm start
+```
+
+The backend will run on:
+
+```text
+http://localhost:5000
+```
+
+---
+
+# 3. Frontend Setup
+
+Open another terminal:
+
+```bash
+cd frontend/frontend
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+The frontend will normally be available at:
+
+```text
+http://localhost:5173
+```
+
+---
+
+# 🔑 Environment Variables
+
+Environment variables are kept outside the Git repository for security.
+
+Required backend variables:
+
+| Variable     | Description                        |
+| ------------ | ---------------------------------- |
+| `PORT`       | Backend server port                |
+| `MONGO_URI`  | MongoDB connection string          |
+| `JWT_SECRET` | Secret used for JWT authentication |
+
+**Never commit the actual `.env` file or database credentials to GitHub.**
+
+---
+
+# 🧪 Testing
+
+Testing is an important part of the TDD Kata requirements.
+
+The project should maintain meaningful tests for backend functionality including:
+
+* User registration
+* User login
+* Authentication
+* Vehicle creation
+* Vehicle retrieval
+* Vehicle search
+* Vehicle update
+* Vehicle deletion
+* Vehicle purchase
+* Vehicle restocking
+* Authorization
+
+### Test Report
+
+Add the final test output/report here after running the project's test suite.
+
+Example:
+
+```text
+Test Suite: AutoStock Backend
+Status: PASS
+Tests Passed: <number>
+Tests Failed: 0
+```
+
+> Replace the placeholder values with the actual test results before submission.
+
+---
+
+# 📸 Screenshots
+
+Add screenshots of the completed application here.
+
+Recommended screenshots:
+
+1. Login page
+2. User dashboard
+3. Vehicle listing
+4. Vehicle search
+5. Admin dashboard
+6. Add Vehicle page
+7. Manage Vehicles page
+8. Restock page
+9. Reports page
+10. Purchase history
+
+Example:
+
+```text
+screenshots/
+├──"C:\Users\Sreeja\OneDrive\Pictures\Screenshots\Screenshot 2026-08-23 132355.png"
+├── "C:\Users\Sreeja\OneDrive\Pictures\Screenshots\Screenshot 2026-08-23 132546.png"
+├──"C:\Users\Sreeja\OneDrive\Pictures\Screenshots\Screenshot 2026-08-23 132550.png"
+├── "C:\Users\Sreeja\OneDrive\Pictures\Screenshots\Screenshot 2026-08-23 132706.png"
+├── "C:\Users\Sreeja\OneDrive\Pictures\Screenshots\Screenshot 2026-08-23 132706.png"
+├── "C:\Users\Sreeja\OneDrive\Pictures\Screenshots\Screenshot 2026-08-23 132845.png"
+└── "C:\Users\Sreeja\OneDrive\Pictures\Screenshots\Screenshot 2026-08-23 133007.png"
+├──"C:\Users\Sreeja\OneDrive\Pictures\Screenshots\Screenshot 2026-08-23 133104.png"
+├──"C:\Users\Sreeja\OneDrive\Pictures\Screenshots\Screenshot 2026-08-23 133148.png"
+
+
+```
+
+Then include them in this section:
+
+```markdown
+![Admin Dashboard]("C:\Users\Sreeja\OneDrive\Pictures\Screenshots\Screenshot 2026-08-23 132546.png")
+```
+
+---
+
+# 🤖 My AI Usage
+
+## AI Tool Used
+
+**ChatGPT (OpenAI)**
+
+ChatGPT was used as an AI-assisted development tool during the implementation of the AutoStock – Car Dealership Inventory System.
+
+## How ChatGPT Was Used
+
+ChatGPT was used for:
+
+* Understanding the TDD Kata requirements.
+* Planning the project structure.
+* Developing and debugging the Node.js and Express.js backend.
+* Implementing REST API functionality.
+* Working with MongoDB and Mongoose.
+* Implementing JWT authentication and authorization.
+* Implementing vehicle inventory operations.
+* Developing the React frontend.
+* Connecting frontend components with backend APIs.
+* Designing and refining the Admin Dashboard UI.
+* Debugging React, API, and integration issues.
+* Troubleshooting Git and GitHub issues.
+* Preparing project documentation and deployment guidance.
+
+## Reflection
+
+ChatGPT helped accelerate development by providing technical explanations, debugging assistance, implementation guidance, and UI improvement suggestions.
+
+The suggestions were reviewed and adapted according to the project's requirements and existing codebase. The AI was used as a development assistant while building and testing the application.
+
+---
+
+# 📄 PROMPTS.md
+
+The repository includes a root-level `PROMPTS.md` file containing the relevant raw AI conversations/prompts used during development, as required by the assignment.
+
+The prompts are maintained separately from this README and are not summarized here.
+
+---
+
+# 🔄 Git & Version Control
+
+Git was used throughout the development process to manage the source code.
+
+Development work was organized into commits representing different stages of implementation.
+
+Example commit format:
+
+```text
+feat: implement vehicle API
+fix: resolve authentication issue
+feat: add admin dashboard
+style: improve dashboard UI
+docs: update README
+```
+---
+
+# 🔒 Security
+
+The project follows basic security practices including:
+
+* JWT authentication
+* Password hashing
+* Protected API routes
+* Admin authorization
+* Environment variables for secrets
+* `.gitignore` configuration to prevent sensitive files from being committed
+
+---
+
+# 🎯 Project Objective
+
+The objective of AutoStock is to provide a practical full-stack inventory management solution for a car dealership while demonstrating skills in:
+
+* REST API development
+* Database management
+* Authentication
+* Authorization
+* React SPA development
+* Inventory management
+* Git version control
+* AI-assisted development
+* Software testing
+* Responsive UI design
+
+---
+
+# 👩‍💻 Author
+
+**Sreeja Chigurla**
+
+4th B.Tech – Computer Science and Engineering
+
+---
+
+# 📜 License
+
+This project was developed for educational and evaluation purposes as part of the **TDD Kata: Car Dealership Inventory System**.

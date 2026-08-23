@@ -1,10 +1,8 @@
-# 🚗 AutoStock – Car Dealership Inventory System
+🚗 AutoStock – Car Dealership Inventory System
 
 A full-stack **Car Dealership Inventory Management System** developed as part of the TDD Kata. The application allows users to browse and purchase vehicles, while administrators can manage vehicles, inventory, users, purchases, and restocking operations through a dedicated dashboard.
 
----
-
-## 📌 Project Overview
+ 📌 Project Overview
 
 AutoStock is a web-based vehicle inventory management application designed to simplify dealership inventory operations.
 
@@ -24,11 +22,9 @@ The system provides:
 * Admin dashboard
 * Responsive React-based user interface
 
----
+🛠️ Technology Stack
 
-## 🛠️ Technology Stack
-
-### Backend
+Backend
 
 * Node.js
 * Express.js
@@ -36,9 +32,8 @@ The system provides:
 * Mongoose
 * JSON Web Token (JWT)
 * bcrypt
-* REST API
-
-### Frontend
+* REST AP
+Frontend
 
 * React
 * Vite
@@ -46,7 +41,7 @@ The system provides:
 * HTML5
 * CSS3
 
-### Development Tools
+ Development Tools
 
 * Git
 * GitHub
@@ -55,11 +50,9 @@ The system provides:
 * MongoDB Compass
 * ChatGPT
 
----
+📂 Project Structure
 
-## 📂 Project Structure
 
-```text
 car-dealership-inventory/
 │
 ├── backend/
@@ -111,27 +104,25 @@ car-dealership-inventory/
 ├── .gitignore
 ├── README.md
 └── PROMPTS.md
-```
 
----
 
-# ✨ Features
+✨ Features
 
-## 👤 User Features
+ 👤 User Features
 
-### Registration
+Registration
 
 Users can create an account by providing their required registration details.
 
-### Login
+ Login
 
 Registered users can securely log in using JWT-based authentication.
 
-### Vehicle Browsing
+ Vehicle Browsing
 
 Users can view vehicles currently available in the dealership inventory.
 
-### Vehicle Search
+Vehicle Search
 
 Vehicles can be searched based on:
 
@@ -140,27 +131,25 @@ Vehicles can be searched based on:
 * Category
 * Price range
 
-### Purchase
+ Purchase
 
 Users can purchase an available vehicle.
 
 The vehicle quantity is decreased after a successful purchase.
 
-### Purchase History
+ Purchase History
 
 Users can view their previous vehicle purchases.
 
-### Profile
+ Profile
 
 Users can view their account/profile information.
 
----
-
-# 👨‍💼 Admin Features
+ 👨‍💼 Admin Features
 
 Administrators have additional inventory-management privileges.
 
-### Admin Dashboard
+ Admin Dashboard
 
 The dashboard provides an overview of:
 
@@ -170,7 +159,7 @@ The dashboard provides an overview of:
 * Low-stock vehicles
 * Recent inventory
 
-### Add Vehicle
+ Add Vehicle
 
 Administrators can add new vehicles to the inventory.
 
@@ -183,29 +172,29 @@ Each vehicle contains:
 * Price
 * Quantity
 
-### Update Vehicle
+ Update Vehicle
 
 Administrators can update vehicle information.
 
-### Delete Vehicle
+ Delete Vehicle
 
 Administrators can remove vehicles from the inventory.
 
-### Restock
+ Restock
 
 Administrators can increase the available quantity of an existing vehicle.
 
-### User Management
+ User Management
 
 Administrators can manage registered users.
 
-### Reports
+ Reports
 
 The application provides inventory-related reporting information through the admin interface.
 
----
 
-# 🔐 Authentication & Authorization
+
+ 🔐 Authentication & Authorization
 
 The backend uses **JWT-based authentication**.
 
@@ -218,18 +207,16 @@ The application uses role-based authorization to distinguish between:
 
 Administrative operations such as deleting and restocking vehicles require administrator privileges.
 
----
+🔌 REST API
 
-# 🔌 REST API
-
-## Authentication
+Authentication
 
 | Method | Endpoint             | Description         |
 | ------ | -------------------- | ------------------- |
 | POST   | `/api/auth/register` | Register a new user |
 | POST   | `/api/auth/login`    | Login user          |
 
-## Vehicles
+Vehicles
 
 | Method | Endpoint               | Description            |
 | ------ | ---------------------- | ---------------------- |
@@ -239,18 +226,17 @@ Administrative operations such as deleting and restocking vehicles require admin
 | PUT    | `/api/vehicles/:id`    | Update vehicle         |
 | DELETE | `/api/vehicles/:id`    | Delete vehicle         |
 
-## Inventory
+ Inventory
 
 | Method | Endpoint                     | Description      |
 | ------ | ---------------------------- | ---------------- |
 | POST   | `/api/vehicles/:id/purchase` | Purchase vehicle |
 | POST   | `/api/vehicles/:id/restock`  | Restock vehicle  |
 
----
 
-# ⚙️ Local Setup
+ ⚙️ Local Setup
 
-## Prerequisites
+ Prerequisites
 
 Install the following before running the project:
 
@@ -259,84 +245,73 @@ Install the following before running the project:
 * MongoDB
 * Git
 
----
 
-## 1. Clone the Repository
+ 1. Clone the Repository
 
-```bash
+bash
 git clone <YOUR_GITHUB_REPOSITORY_URL>
 cd car-dealership-inventory
-```
 
----
-
-# 2. Backend Setup
+ 2. Backend Setup
 
 Open a terminal:
 
-```bash
+bash
 cd backend
-```
+
 
 Install dependencies:
 
-```bash
+bash
 npm install
-```
 
 Create a `.env` file inside the `backend` directory.
 
 Example:
 
-```env
+env
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
-```
+
 
 Start the backend:
 
-```bash
+bash
 npm start
-```
 
 The backend will run on:
 
-```text
+
 http://localhost:5000
-```
 
----
-
-# 3. Frontend Setup
+3. Frontend Setup
 
 Open another terminal:
 
-```bash
+bash
 cd frontend/frontend
-```
+
 
 Install dependencies:
 
-```bash
+bash
 npm install
-```
+
 
 Start the development server:
 
-```bash
+bash
 npm run dev
-```
+
 
 The frontend will normally be available at:
 
-```text
+text
 http://localhost:5173
-```
 
----
 
-# 🔑 Environment Variables
+🔑 Environment Variables
 
 Environment variables are kept outside the Git repository for security.
 
@@ -350,9 +325,7 @@ Required backend variables:
 
 **Never commit the actual `.env` file or database credentials to GitHub.**
 
----
-
-# 🧪 Testing
+🧪 Testing
 
 Testing is an important part of the TDD Kata requirements.
 
@@ -370,28 +343,21 @@ The project should maintain meaningful tests for backend functionality including
 * Vehicle restocking
 * Authorization
 
-### Test Report
+Test Report
 
 Add the final test output/report here after running the project's test suite.
 
 Example:
 
-```text
 Test Suite: AutoStock Backend
 Status: PASS
 Tests Passed: <number>
 Tests Failed: 0
-```
 
 > Replace the placeholder values with the actual test results before submission.
 
----
 
-# 📸 Screenshots
-
-Add screenshots of the completed application here.
-
-Recommended screenshots:
+ 📸 Screenshots
 
 1. Login page
 2. User dashboard
@@ -406,9 +372,8 @@ Recommended screenshots:
 
 Example:
 
-```text
 screenshots/
-├──"C:\Users\Sreeja\OneDrive\Pictures\Screenshots\Screenshot 2026-08-23 132355.png"
+├──![Login Page](./screenshots/"C:\Users\Sreeja\OneDrive\Pictures\Screenshots\Screenshot 2026-08-23 132355.png")
 ├── "C:\Users\Sreeja\OneDrive\Pictures\Screenshots\Screenshot 2026-08-23 132546.png"
 ├──"C:\Users\Sreeja\OneDrive\Pictures\Screenshots\Screenshot 2026-08-23 132550.png"
 ├── "C:\Users\Sreeja\OneDrive\Pictures\Screenshots\Screenshot 2026-08-23 132706.png"

@@ -373,7 +373,7 @@ Tests Failed: 0
 Example:
 
 screenshots/
-├──![Login Page](./screenshots/"C:\Users\Sreeja\OneDrive\Pictures\Screenshots\Screenshot 2026-08-23 132355.png")
+├──Screenshot 2026-08-23 132355.png
 ├── "C:\Users\Sreeja\OneDrive\Pictures\Screenshots\Screenshot 2026-08-23 132546.png"
 ├──"C:\Users\Sreeja\OneDrive\Pictures\Screenshots\Screenshot 2026-08-23 132550.png"
 ├── "C:\Users\Sreeja\OneDrive\Pictures\Screenshots\Screenshot 2026-08-23 132706.png"
